@@ -1,0 +1,159 @@
+/* Reset CSS: Thiết lập lại các giá trị mặc định để đảm bảo tính nhất quán trên các trình duyệt */
+* {
+  margin: 0; /* Xóa bỏ margin mặc định */
+  padding: 0; /* Xóa bỏ padding mặc định */
+  box-sizing: border-box; /* Đảm bảo padding và border không ảnh hưởng đến kích thước tổng */
+}
+
+/* Căn chỉnh phần thẻ tên học viên */
+.nametag {
+  margin-top: 40px;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 6px;
+  border-style: solid;
+  border-color: #ffcc00;
+  color: #ffcc00;
+}
+
+/* Định dạng cho khối mạng xã hội */
+.mxh {
+  margin: 50px;
+}
+
+/* Định dạng cho các logo mạng xã hội */
+.mxh a {
+  margin: 0 10px; /* Khoảng cách giữa các logo là 10px */
+  text-decoration: none; /* Loại bỏ gạch chân dưới liên kết */
+  display: inline-block; /* Hiển thị trên một dòng */
+}
+
+/* Định dạng cho phần tử với id là 'chess' */
+#chess {
+  border-radius: 50%; /* tạo thành hình tròn */
+}
+
+/* Định dạng cho các hình ảnh logo trong khối .mxh */
+.mxh img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.5s; /* Hiệu ứng chuyển đổi khi hover với thời gian 0.5s */
+  margin: 0 0px;
+}
+
+/* Định dạng cho các phần tử với id là 'thongtin', 'lylich', 'sothich' */
+#thongtin,
+#lylich,
+#sothich {
+  margin-top: 20px;
+}
+
+/* Hiệu ứng khi hover trên các liên kết mạng xã hội */
+.mxh a:hover img {
+  transform: scale(2.5); /* Phóng to lên 2.5 lần */
+}
+
+/* Định dạng cho hình ảnh đại diện */
+.anhthe {
+  width: 180px;
+  height: 180px;
+  border: 3px solid #ffcc00;
+  border-radius: 50%; /* Bo tròn */
+  overflow: hidden; /* Ẩn các phần vượt quá kích thước */
+  margin: 0 auto; /* Canh giữa theo chiều ngang */
+  transform: translateY(20px); /* Dịch chuyển xuống dưới 20px */
+}
+
+/* Hiệu ứng khi hover trên ảnh đại diện */
+.anhthe:hover {
+  width: 100%; /* Chiều rộng tăng lên 100% */
+  height: 100%; /* Chiều cao tăng lên 100% */
+  border-radius: 25px; /* Bo góc 25px */
+  transform: unset; /* Loại bỏ bất kỳ hiệu ứng transform nào */
+}
+
+/* Định dạng chung cho tất cả các hình ảnh */
+img {
+  object-fit: cover; /* Điều chỉnh hình ảnh để phù hợp với khung mà không bị méo */
+  width: 100%;
+  height: 100%;
+  object-position: center; /* Định vị hình ảnh ở giữa */
+}
+
+/* Định dạng chung cho thẻ body */
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh; /* Chiều cao màn hình 100% viewport */
+  display: flex; /* Sử dụng flexbox để canh giữa nội dung */
+  justify-content: center; /* Canh giữa theo chiều ngang */
+  align-items: center; /* Canh giữa theo chiều dọc */
+  background: #333;
+  color: #ffffff;
+}
+
+/* Định dạng cho ảnh nền */
+.background-image {
+  position: absolute; /* Đặt ảnh nền ở vị trí tuyệt đối */
+  top: 0; /* Canh từ trên cùng */
+  left: 0; /* Canh từ bên trái */
+  width: 100%; /* Chiều rộng 100% */
+  height: 100%; /* Chiều cao 100% */
+  background: url("./image/khoi.annd.jpg") no-repeat center center/cover; /* link ảnh nền */
+  z-index: -1; /* Đẩy ảnh nền xuống 1 layout */
+}
+
+/* Định dạng cho thẻ chứa thông tin cá nhân */
+.card {
+  border-style: solid;
+  border-color: #ffcc00;
+  width: 300px;
+  height: 500px;
+  border-radius: 25px;
+  text-align: center;
+  overflow: hidden; /* Ẩn các phần vượt ra ngoài khung */
+  background: rgba(0, 0, 0, 0.6); /* Nền màu đen trong suốt */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Đổ bóng nhẹ xung quanh */
+  margin: 0 20px;
+}
+
+/* Định dạng cho thẻ chứa lý lịch (có class LL) */
+.LL {
+  border-style: solid;
+  border-color: #ffcc00;
+  width: 600px;
+  height: 500px;
+  border-radius: 25px;
+  overflow: hidden; /* Ẩn các phần vượt ra ngoài khung */
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Đổ bóng nhẹ xung quanh */
+  margin: 0 20px;
+}
+
+/* Định dạng cho các phần tử sothich, thongtin, lylich */
+#thongtin,
+#lylich,
+#sothich {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
+
+/* Định dạng riêng cho phần sothich */
+.sothich {
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-right: 0px;
+}
+
+/* Định dạng cho đoạn văn trong phần about */
+.about p {
+  font-size: 1.2em; /* Cỡ chữ lớn hơn mặc định */
+  margin-bottom: 30px; /* Khoảng cách dưới 30px */
+}
+
+/* Hiệu ứng khi di chuột trên phần nametag */
+.nametag:hover {
+  background: #ffcc00; /* Đổi nền thành vàng */
+  color: #000000; /* Đổi màu chữ thành đen */
+}
